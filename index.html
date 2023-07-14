@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 		<title>Devx - Data Analyst Portfolio</title>
@@ -15,31 +14,91 @@
 			<div id="main">
 
 				<!-- Header -->
-					<header id="header">
-						<h1>Mohamed Abdelwahed</h1>
-						<p>Data Analyst</p>
-						<nav>
-							<ul>
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</header>
+				<header id="header">
+					<h1>Mohamed Abdelwahed</h1>
+					<p>Data Analyst</p>
+					<nav>
+						<ul>
+							<li><a href="#gas-section" onclick="smoothScroll(event, '#gas-section')">GAS</a></li>
+							<li><a href="#data-studio" onclick="smoothScroll(event, '#data-studio')">Dashboards</a></li>
+							<li><a href="#excel-sheets" onclick="smoothScroll(event, '#excel-sheets')">Spreadsheets</a></li>
+                            <li><a href="#sql-section" onclick="smoothScroll(event, '#sql-section')">SQL</a></li>
+							<li><a href="#python-section" onclick="smoothScroll(event, '#python-section')">Python</a></li>
+
+						</ul>
+					</nav>
+				</header>
+
+				<!-- GAS Section -->
+			<!-- GAS Section -->
+<section id="gas-section">
+	<h2>Case Assignment Tool - CRUD</h2>
+	<p>The Case Assignment Tool is a project developed by a data analyst to efficiently assign cases to agents for processing and tracking their progress. The tool is built using a combination of Google Apps Script (GAS), Spreadsheets, BigQuery, JavaScript, HTML, CSS, and Datatable. It incorporates CRUD functionality and offers several key features to enhance case management and agent productivity.</p>
+	<h3>Features</h3>
+	<ul>
+		<li>Single Case Assignment: The tool allows for the assigning of single cases to agents in "play mode." Each agent is assigned a case, and once the agent closes the case, the next one in the queue is automatically presented. This feature ensures a fair distribution of workload among agents.</li>
+		<li>Queues: Cases are categorized into different queues to provide better organization and tracking. The available queues include:
+			<ul>
+				<li>New: Contains newly assigned cases that have not been processed yet.</li>
+				<li>Pending: Contains cases that are awaiting further action or information.</li>
+				<li>OnHold: Contains cases that are temporarily paused or put on hold.</li>
+				<li>Closed: Contains cases that have been successfully resolved or closed.</li>
+			</ul>
+		</li>
+		<li>Search and Filter: The tool provides search and filter functionality to quickly locate specific cases based on different criteria such as case number, customer name, or case status. This feature enables efficient case retrieval and management.</li>
+		<li>Re-assignment: In situations where case ownership needs to be changed, the tool allows for re-assigning cases to different agents. This feature ensures flexibility in managing case distribution and workload allocation.</li>
+		<li>Notifications: The tool incorporates a notification system to keep agents informed about important updates and changes in case assignments. Agents receive real-time notifications within the tool interface, ensuring they stay updated and can promptly respond to any changes.</li>
+		<li>Email Integration: To further enhance communication, the tool integrates with email services, enabling automated email notifications to be sent to agents or other stakeholders. This feature facilitates efficient and timely communication regarding case assignments and updates.</li>
+		<li>Admin Dashboard: The tool provides an admin dashboard where managers can track the time spent by each agent on individual cases. This feature allows managers to monitor agent productivity, identify bottlenecks, and make informed decisions for optimizing case assignment and resource allocation.</li>
+	</ul>
+ <p><a href="https://sites.google.com/view/adw-teacher-eva/teacher-evaluation" target="_blank">View the project</a></p>
+
+</section>
+
+
+				<!-- Python Section -->
+				<section id="python-section">
+					<h2>Python</h2>
+					<!-- Python content goes here -->
+				</section>
+
+				<!-- SQL Section -->
+				<section id="sql-section">
+					<h2>SQL</h2>
+					<!-- SQL content goes here -->
+				</section>
+
+				<!-- Visualization Section -->
+				<section id="visualization-section">
+					<h2>Visualization</h2>
+					<!-- Visualization content goes here -->
+				</section>
 
 				<!-- Footer -->
-					<footer id="footer">
-						
-					</footer>
+				<footer id="footer"></footer>
 
 			</div>
 		</div>
 		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
+			// Smooth scroll function
+			function smoothScroll(event, targetId) {
+				event.preventDefault();
+				const targetElement = document.querySelector(targetId);
+				targetElement.scrollIntoView({
+					behavior: "smooth",
+					block: "start"
+				});
+			}
+
+			window.onload = function() {
+				document.body.classList.remove('is-preload');
+			}
+			window.ontouchmove = function() {
+				return false;
+			}
+			window.onorientationchange = function() {
+				document.body.scrollTop = 0;
+			}
 		</script>
 	</body>
 </html>
